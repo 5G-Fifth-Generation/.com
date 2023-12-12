@@ -1,16 +1,8 @@
-/**
-* Template Name: HeroBiz
-* Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
-  /**
-   * Preloader
-   */
+ 
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
@@ -18,9 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /**
-   * Sticky header on scroll
-   */
+
   const selectHeader = document.querySelector('#header');
   if (selectHeader) {
     document.addEventListener('scroll', () => {
@@ -28,9 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /**
-   * Navbar links active state on scroll
-   */
+
   let navbarlinks = document.querySelectorAll('#navbar .scrollto');
 
   function navbarlinksActive() {
@@ -54,9 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', navbarlinksActive);
   document.addEventListener('scroll', navbarlinksActive);
 
-  /**
-   * Function to scroll to an element with top ofset
-   */
+
   function scrollto(el) {
     const selectHeader = document.querySelector('#header');
     let offset = 0;
@@ -72,9 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /**
-   * Fires the scrollto function on click to links .scrollto
-   */
+
   let selectScrollto = document.querySelectorAll('.scrollto');
   selectScrollto.forEach(el => el.addEventListener('click', function(event) {
     if (document.querySelector(this.hash)) {
@@ -92,9 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }));
 
-  /**
-   * Scroll with ofset on page load with hash links in the url
-   */
+  
   window.addEventListener('load', () => {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
@@ -103,9 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /**
-   * Mobile nav toggle
-   */
+  
   const mobileNavToogle = document.querySelector('.mobile-nav-toggle');
   if (mobileNavToogle) {
     mobileNavToogle.addEventListener('click', function(event) {
@@ -118,9 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
+  
   const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
 
   navDropdowns.forEach(el => {
@@ -137,9 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   });
 
-  /**
-   * Auto generate the hero carousel indicators
-   */
+  
   let heroCarouselIndicators = document.querySelector('#hero .carousel-indicators');
   if (heroCarouselIndicators) {
     let heroCarouselItems = document.querySelectorAll('#hero .carousel-item')
